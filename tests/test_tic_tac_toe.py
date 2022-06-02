@@ -1,71 +1,72 @@
 import pytest
-from app.9_tic_tac_toe import tic_tac_toe_winner
+from app.tic_tac_toe import tic_tac_toe_winner
 
 def test_tie(self):
-          # Arrange
-          board =[
-              ['X', 'O', 'X'],
-              ['O', 'O', 'X'],
-              ['X', 'X', 'O']
-          ]
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'X', 'O']
+    ]
 
-          # Act
-          result = tic_tac_toe_winner(board)
+    # Act
+    result = tic_tac_toe_winner(board)
 
-          # Assert
-          assert result == 'Tie'
-  def test_incomplete(self):
-      # Arrange
-      board =[
-          ['X', 'O', 'X'],
-          ['O', 'O', 'X'],
-          ['X', '', 'O']
-      ]
+    # Assert
+    assert result == 'Tie'
 
-      # Act
-      result = tic_tac_toe_winner(board)
+def test_incomplete(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', '', 'O']
+    ]
 
-      # Assert
-      assert result == None
+    # Act
+    result = tic_tac_toe_winner(board)
 
-  def test_col_win(self):
-      # Arrange
-      board =[
-          ['X', 'O', 'X'],
-          ['O', 'O', 'X'],
-          ['X', 'O', 'O']
-      ]
+    # Assert
+    assert result == None
 
-      # Act
-      result = tic_tac_toe_winner(board)
+def test_col_win(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'O', 'O']
+    ]
 
-      # Assert
-      assert result == 'O'
+    # Act
+    result = tic_tac_toe_winner(board)
 
-  def test_row_win(self):
-      # Arrange
-      board =[
-          ['X', 'O', 'X'],
-          ['O', 'O', 'O'],
-          ['X', 'X', 'O']
-      ]
+    # Assert
+    assert result == 'O'
 
-      # Act
-      result = tic_tac_toe_winner(board)
+def test_row_win(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'O'],
+        ['X', 'X', 'O']
+    ]
 
-      # Assert
-      assert result == 'O'
+    # Act
+    result = tic_tac_toe_winner(board)
 
-  def test_diag_win(self):
-      # Arrange
-      board =[
-          ['O', 'O', 'X'],
-          ['O', 'O', 'X'],
-          ['X', 'X', 'O']
-      ]
+    # Assert
+    assert result == 'O'
 
-      # Act
-      result = tic_tac_toe_winner(board)
+def test_diag_win(self):
+    # Arrange
+    board =[
+        ['O', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'X', 'O']
+    ]
 
-      # Assert
-      assert result == 'O'
+    # Act
+    result = tic_tac_toe_winner(board)
+
+    # Assert
+    assert result == 'O'
