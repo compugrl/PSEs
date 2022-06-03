@@ -1,5 +1,5 @@
 import pytest
-from app.8_kth_missing import kth_missing_positive_number
+from app.kth_missing import kth_missing_positive_number
 
 def test_kth_missing_positive_number_finds_num_before_entire_given_list(self):
       # Arrange

@@ -17,6 +17,11 @@ def validate_data(arr, k):
                     
         
 def kth_missing_positive_number(arr, k):
+    '''
+    INPUT: List of numbers in increating order & a positive integer k
+    OUTPUT: The kth missing number
+    '''
+    
     valid = False
     max_len = 1000
     missing_ints = []
@@ -33,5 +38,3 @@ def kth_missing_positive_number(arr, k):
                 return j
     else:
         return k
-
-print(kth_missing_positive_number([2,3,4,7,11], 5))
