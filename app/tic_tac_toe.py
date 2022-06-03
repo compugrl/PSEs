@@ -6,11 +6,10 @@ winning_combos = [[ (0, 0), (0, 1), (0, 2)], [(1, 0), (1, 1), (1, 2)], [(2, 0), 
 
 def tic_tac_toe_winner(board):
     winning_char = ''
+    blank_cell = False
 
     for i in range(len(winning_combos)):
         cells = []
-        blank_cell = False
-
         combo = winning_combos[i]
         
         for coords in combo:
@@ -34,9 +33,9 @@ def tic_tac_toe_winner(board):
     return winning_char
 
 board = [
-    ['X', '', 'O'],
-    ['O', 'X', 'X'],
-    ['', '', '']
-]
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', '', 'O']
+    ]
 
 print(f"Winner: {tic_tac_toe_winner(board)}")
