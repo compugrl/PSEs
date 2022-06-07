@@ -38,3 +38,8 @@ def kth_missing_positive_number(arr, k):
                 return j
     else:
         return k
+
+list = [2,3,4,7,11]
+k = 5
+answer = kth_missing_positive_number(list, k)
+print(f"Answer: {answer}")
