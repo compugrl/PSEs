@@ -1,7 +1,7 @@
 import pytest
 from app.tic_tac_toe import tic_tac_toe_winner
 
-def test_tie(self):
+def test_tie():
     # Arrange
     board =[
         ['X', 'O', 'X'],
@@ -15,7 +15,7 @@ def test_tie(self):
     # Assert
     assert result == 'Tie'
 
-def test_incomplete(self):
+def test_incomplete():
     # Arrange
     board =[
         ['X', 'O', 'X'],
@@ -29,7 +29,7 @@ def test_incomplete(self):
     # Assert
     assert result == None
 
-def test_col_win(self):
+def test_col_win():
     # Arrange
     board =[
         ['X', 'O', 'X'],
@@ -43,7 +43,7 @@ def test_col_win(self):
     # Assert
     assert result == 'O'
 
-def test_row_win(self):
+def test_row_win():
     # Arrange
     board =[
         ['X', 'O', 'X'],
@@ -57,7 +57,7 @@ def test_row_win(self):
     # Assert
     assert result == 'O'
 
-def test_diag_win(self):
+def test_diag_win():
     # Arrange
     board =[
         ['O', 'O', 'X'],
